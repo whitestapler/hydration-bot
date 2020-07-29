@@ -1,0 +1,15 @@
+{
+  "name": "hydration-bot",
+  "version": "1.0.0",
+  "description": "Discord bot that helps remind you to hydrate!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugenia Zhang",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "discord.js": "^12.2.0"
+  }
+}
