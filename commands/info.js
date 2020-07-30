@@ -6,11 +6,12 @@ module.exports = {
     execute(message, args){
         message.channel.send({embed: {
             color: '#0099ff',
-            title: `How to call me to remind you and your friends to hydrate!`,
-            description: "My prefix is: #\nThat means, in order to call on me, you have to begin your command with a #!\n\n"
-            + "info: to see what commands you can write to call me!\nremind everyone: to remind everyone in the server that "
-            + "they need to hydrate!\nremind USER: replace USER with a mention, and you'll be able to remind them"
-            + " specifically that they need to hydrate!\nremind USER TIME: (work in progress)\npoll: (work in progress)",
+            title: `About HydrateOrDiedrate`,
+            description: "Hello! I am a bot that provides you and your friends a fun and interactive way to be reminded" +
+            " to hydrate :sweat_drops: constantly!\n\n**My prefix is: ~**\nThat means, in order to call on me, you have to begin your command" +
+            " with a ~ symbol!\n\nIf you need a list on what commands are available, please use **~help**.\n\nWant to know" +
+            " what our awesome creator, Eugenia, is brewing up for the future me? [Click here](https://github.com/ezhang5/hydration-bot)" +
+            " to learn more!",
             timestamp: new Date(),
           }
         });

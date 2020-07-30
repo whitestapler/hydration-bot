@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const cron = require('cron');
 
 // what must be in the beginning of command
-const prefix = '#';
+const prefix = '~';
 
 
 
@@ -54,6 +54,8 @@ client.on('message', message => {
         } else if (args[0].toLowerCase() === 'ping') {
             client.commands.get('ping').execute(message, args);
             // message.channel.send('Hydrate!');
+        } else if (args[0].toLowerCase() === 'help') {
+            client.commands.get('help').execute(message, args);
         }
     } else {
         if (args[0].toLowerCase() === 'remind' && args[1].toLowerCase() === 'everyone') { // REMIND EVERYONE
@@ -74,4 +76,4 @@ client.on('message', message => {
 
 
 
-client.login('super secret client code');
+client.login('super secret token!!!!');
