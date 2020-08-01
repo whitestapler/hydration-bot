@@ -76,4 +76,4 @@ client.on('message', message => {
 
 
 
-client.login('NzM3MDExOTgwOTk2NDQ0MjIx.Xx3J5Q.VVFGqK-Txquk_spn4cWaMQQ19yQ');
+client.login('super secret client code');
