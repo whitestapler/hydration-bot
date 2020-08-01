@@ -22,12 +22,12 @@ module.exports = {
                 })
                 .catch(collected => { // if they answer no, or does not reply
                     message.channel.send(`Oh dear! Looks like ${taggedUser.username} didn't respond or has not hydrated recently.` +
-                    ` I will send out a reminder shortly!`);
+                    ` Sending reminder now...\n\n\n`);
                     message.channel.send({embed: {
                         color: '#0099ff',
                         title: `A reminder from ${message.author.username}!`,
                         description: `Hi, <@${taggedUser.id}>!\n` +
-                        "Please hydrate soon! Your body is waiting :smile:!",
+                        `On behalf of ${message.author.username}, please hydrate soon! Your body is waiting :smile:!`,
                     }
                     });
                 });

@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-const client = new Discord.Client();
+const client = new Discord.Client({disableEveryone: false});
 
 const cron = require('cron');
 
@@ -28,7 +28,7 @@ client.once('ready', () => {
 
 
 
-// daily scheduled reminder at 11am
+// daily scheduled reminder at 11am (doesn't work right now......awkward)
 let scheduledMessage = new cron.CronJob('00 00 11 * * *', () => { // runs everyday at 11am
     let channel = yourGuild.channels.get('id'); // gets server id
     message.channel.send('This is your daily reminder to hydrate!');
@@ -44,18 +44,18 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).trim().split(" ");
 
     // different commands here
-    if (args.length == 1) {
+    if (args.length == 1) { // if args is length 1
         if (!message.mentions.users.size && args[0].toLowerCase() === 'remind') {
             return message.reply('You need to mention a user to remind them to hydrate!');
         } else if (args[0].toLowerCase() === 'info'){ // WHAT YOU CAN DO WITH THE BOT
             client.commands.get('info').execute(message, args);
-        } else if (args[0].toLowerCase() === 'poll') { //POLLS USERS ON IF THEY HYDRATED OR NOT
-            // PUT POLL STUFF HERE
         } else if (args[0].toLowerCase() === 'ping') {
             client.commands.get('ping').execute(message, args);
             // message.channel.send('Hydrate!');
         } else if (args[0].toLowerCase() === 'help') {
             client.commands.get('help').execute(message, args);
+        } else if (args[0].toLowerCase() === 'poll') {
+            client.commands.get('poll').execute(message, args);
         }
     } else {
         if (args[0].toLowerCase() === 'remind' && args[1].toLowerCase() === 'everyone') { // REMIND EVERYONE
@@ -76,4 +76,4 @@ client.on('message', message => {
 
 
 
-client.login('super secret token!!!!');
+client.login('NzM3MDExOTgwOTk2NDQ0MjIx.Xx3J5Q.VVFGqK-Txquk_spn4cWaMQQ19yQ');
